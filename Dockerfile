@@ -21,3 +21,7 @@ RUN	pip install --upgrade --editable ./pwntools
 # Radare2
 ADD	https://github.com/radare/radare2
 RUN	sys/install.sh
+
+# r2pm and plugins & r2dec plugin install
+RUN	r2pm init
+RUN	r2pm install r2dec
