@@ -1,6 +1,6 @@
 # Install ubuntu 16.04
 FROM		ubuntu:16.04
-MAINTAINER	ch1keen@protonmail.com
+LABEL	    maintainer="ch1keen@protonmail.com"
 
 # Install essential tools for gdb-peda & pwntools
 # dpkg --add-architecture i386 && install *:i386 for 32bit binary execution support
