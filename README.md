@@ -14,4 +14,4 @@ Some tools integrated image for easy CTF or education. It could be used for sand
 * Automated install and use via shell script
 * Add various tools
 * Make user select pwndbg or gdb-peda (or both!)
-* radare2 plugin support ('make' and 'pkg-config' should be installed for this stage)
+* radare2 plugin support 
