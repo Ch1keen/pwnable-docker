@@ -6,21 +6,21 @@ LABEL	    maintainer="ch1keen@protonmail.com"
 # dpkg --add-architecture i386 && install *:i386 for 32bit binary execution support
 RUN	dpkg --add-architecture i386
 RUN	apt -y update
-RUN	apt install -y vim python python-dev git gdb wget curl gcc make  libc6:i386 libncurses5:i386 libstdc++6:i386 --no-install-recommends
+RUN	apt install -y vim python python-dev gdb wget curl gcc make git libc6:i386 libncurses5:i386 libstdc++6:i386 ca-certificates patch pkg-config --no-install-recommends
 
 # Install gdb-peda
-ADD	https://github.com/longld/peda.git ~/peda
+RUN	git clone https://github.com/longld/peda.git ~/peda
 RUN	echo "source ~/peda/peda.py" >> ~/.gdbinit
 
 # Install python-pip
 ADD	https://bootstrap.pypa.io/get-pip.py ./get-pip.py
 RUN	python get-pip.py
-RUN	git clone https://github.com/Gallopsled/pwntools
-RUN	pip install --upgrade --editable ./pwntools
+RUN	git clone https://github.com/Gallopsled/pwntools ~/pwntools
+RUN	pip install --upgrade --editable ~/pwntools
 
 # Radare2
-ADD	https://github.com/radare/radare2
-RUN	sys/install.sh
+RUN	git clone https://github.com/radare/radare2 ~/radare2
+RUN	~/radare2/sys/install.sh
 
 # r2pm and plugins & r2dec plugin install
 RUN	r2pm init
