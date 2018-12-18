@@ -6,7 +6,7 @@ LABEL	    maintainer="ch1keen@protonmail.com"
 # dpkg --add-architecture i386 && install *:i386 for 32bit binary execution support
 RUN	dpkg --add-architecture i386
 RUN	apt -y update
-RUN	apt install -y vim python python-dev gdb wget curl gcc make git libc6:i386 libncurses5:i386 libstdc++6:i386 ca-certificates patch pkg-config --no-install-recommends
+RUN	apt install -y vim python python-dev gdb wget curl gcc make git libc6:i386 libncurses5:i386 libstdc++6:i386 ca-certificates patch pkg-config strace ltrace file upx-ucl --no-install-recommends
 
 # Install gdb-peda
 RUN	git clone https://github.com/longld/peda.git ~/peda
