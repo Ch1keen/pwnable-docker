@@ -1,6 +1,6 @@
 # Pwnable-Docker
 
-Some tools integrated image for easy CTF or education. It could be used for sandboxing.
+Some tools integrated image for easy CTF or education. It also could be used for sandboxing.
 
 ## How To Run
 
@@ -28,3 +28,5 @@ Some tools integrated image for easy CTF or education. It could be used for sand
 
 * Add various tools
 * Make user select pwndbg or gdb-peda (or both!)
+* Supporting QEMU
+* pwntools-ruby && pwntools python3
