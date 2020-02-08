@@ -16,7 +16,8 @@ Some tools integrated image for easy CTF or education. It also could be used for
   * r2pm
   * r2dec (https://github.com/wargio/r2dec-js)
 * Pwntools (https://github.com/Gallopsled/pwntools)
-* gdb-peda (https://github.com/longld/peda) 
+* pwntools-ruby (https://github.com/peter50216/pwntools-ruby)
+* Peda-heap (https://github.com/Mipu94/peda-heap)
 * one_gadget (https://github.com/david942j/one_gadget)
 * tracers
   * strace
@@ -29,4 +30,3 @@ Some tools integrated image for easy CTF or education. It also could be used for
 * Add various tools
 * Make user select pwndbg or gdb-peda (or both!)
 * Supporting QEMU
-* pwntools-ruby && pwntools python3
